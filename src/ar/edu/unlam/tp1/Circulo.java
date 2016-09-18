@@ -4,7 +4,15 @@ public class Circulo {
 	
 	private Double radio;
 	
-	public void setPerimetro (Double radio){
+	public Circulo(){
+		this.radio = 0.0;
+	}
+	
+	public Circulo(Double radio){
+		this.radio = radio;
+	}
+	
+	public void setRadio (Double radio){
 		this.radio = radio;
 	}
 	
@@ -13,7 +21,7 @@ public class Circulo {
 	}
 	
 	public Double getPerimetro(){
-		return 2 * Math.PI * radio;
+		return (2 * Math.PI * radio);
 	}
 
 }

@@ -9,46 +9,57 @@ public class CirculoTest {
 	
 	@Test
 	public void crearUnCirculoConRadio2() {
-		Circulo Circulo2 = new Circulo();
-		Circulo2.setPerimetro(2.0);
+		
+		final Double esperado = 2.0;
+		Circulo MiCirculo = new Circulo();
+		
+		MiCirculo.setRadio(esperado);
+		assertEquals(esperado, MiCirculo.getRadio(), 0.01);
 	}
 	
 	@Test
 	public void crearUnCirculoConRadio3Punto7() {
-		Circulo Circulo37 = new Circulo();
-		Circulo37.setPerimetro(3.7);
+		final Double esperado = 3.7;
+		Circulo MiCirculo = new Circulo(esperado);
+		
+		//MiCirculo.setRadio(esperado);
+		assertEquals(esperado, MiCirculo.getRadio(), 0.01);
 	}
 	
 	@Test
 	public void crearUnCirculoConRadio5() {
-		Circulo Circulo5 = new Circulo();
-		Circulo5.setPerimetro(5.0);
+		final Double esperado = 5.0;
+		Circulo MiCirculo = new Circulo();
+		
+		MiCirculo.setRadio(esperado);
+		assertEquals(esperado, MiCirculo.getRadio(), 0.01);
 	}
 	
 	@Test
 	public void crearUnCirculoConRadio10Punto9() {
-		Circulo Circulo109 = new Circulo();
-		Circulo109.setPerimetro(10.9);
+		final Double esperado = 10.9;
+		Circulo MiCirculo = new Circulo();
+		
+		MiCirculo.setRadio(esperado);
+		assertEquals(esperado, MiCirculo.getRadio(), 0.01);
 	}
 	
 	@Test
-	public void queElAreaDeUnCirculoConRadio9Punto8Es615Punto73() {
-		Circulo Circulo61573 = new Circulo();
-		Circulo61573.setPerimetro(615.73);
+	public void queElAreaDeUnCirculoConRadio9Punto8Es61Punto57() {
+		final Double esperado = 61.57;
+		Circulo MiCirculo = new Circulo(9.8);
+		
+		assertEquals(esperado, MiCirculo.getPerimetro(), 0.01);
 	}
 	
 	@Test
-	public void crearUnCirculoConRadio16Punto6Es865Punto67() {
-		Circulo Circulo166 = new Circulo();
-		Circulo166.setPerimetro(16.6);
+	public void crearUnCirculoConRadio16Punto6Es104Punto3() {
+		final Double esperado = 104.3;
+		Circulo MiCirculo = new Circulo(16.6);
+		
+		assertEquals(esperado, MiCirculo.getPerimetro(), 0.01);
 	}
 	
-	@Test
-	public void CirculoT(){
-		Circulo CirculoNuevo = new Circulo();
-		CirculoNuevo.setPerimetro(16.6);
-		System.out.print(CirculoNuevo.getPerimetro());
-	}
 	/*
 	@Test
 	public void queElTipDeAyudaDeVerde(){ // :)
@@ -57,7 +68,7 @@ public class CirculoTest {
 		Double actual = 1.10;
 		
 		/**
-		 *  Recordar que el siguiente mÃ©todo se puede usar por que al inicio del archivo
+		 *  Recordar que el siguiente método se puede usar por que al inicio del archivo
 		 *  se importaron todos los assert con la siguiente linea 
 		 *  import static org.junit.Assert.*; 
 		 *
